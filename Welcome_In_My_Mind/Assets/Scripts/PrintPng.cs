@@ -11,8 +11,8 @@ public class PrintPng : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnMouseDown ()
     {
-        
+        Debug.Log("click sur " + this.gameObject.name); //affiche png sur caméra 
     }
 }
