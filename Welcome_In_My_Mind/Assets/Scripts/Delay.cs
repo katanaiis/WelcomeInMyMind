@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Delay : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 10f;
+    float startingTime = 60f;
 
     public string sceneName;
 
@@ -20,11 +20,11 @@ public class Delay : MonoBehaviour
     void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        print(currentTime);
+        //print(currentTime);
 
-        //if(startingTime = 0f)
-        //{
-            //SceneManager.LoadScene(sceneName);
-        //}
+        if(currentTime <= 0f)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }
