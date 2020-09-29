@@ -1,19 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ButtonQuit : MonoBehaviour
 {
-    public GameObject canvas;
+    /*public GameObject canvas;
 
-    // Start is called before the first frame update
-
-    // Update is called once per frame
     void OnMouseDown()
     {
-        if (canvas.activeSelf)
-        {
-            canvas.SetActive(false);
-        }
-    }
+        canvas.Quit();
+    }*/
 }
