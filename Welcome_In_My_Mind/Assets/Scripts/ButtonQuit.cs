@@ -6,10 +6,15 @@ using UnityEngine.UI;
 
 public class ButtonQuit : MonoBehaviour
 {
-    /*public GameObject canvas;
+    public Canvas canvas;
+
+    void Start()
+    {
+        canvas = GetComponent<Canvas>();
+    }
 
     void OnMouseDown()
     {
-        canvas.Quit();
-    }*/
+        canvas.GetComponent<Canvas>().enabled = false;
+    }
 }
