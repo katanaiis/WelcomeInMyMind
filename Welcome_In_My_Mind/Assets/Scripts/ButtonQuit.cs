@@ -15,6 +15,9 @@ public class ButtonQuit : MonoBehaviour
 
     void OnMouseDown()
     {
-        canvas.GetComponent<Canvas>().enabled = false;
+        if (canvas.enabled = true)
+        {
+            canvas.enabled = false;
+        }
     }
 }
