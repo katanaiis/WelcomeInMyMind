@@ -10,12 +10,15 @@ public class ButtonQuit : MonoBehaviour
 
     void Start()
     {
-        canvas = GetComponent<Canvas>();
+        /*if( canvas == null)
+        {
+            transform.parent.GetComponent<canvas>();
+        }*/
     }
 
-    void OnMouseDown()
+    public void Quit()
     {
-        if (canvas.enabled = true)
+        if (canvas.enabled == true)
         {
             canvas.enabled = false;
         }

@@ -14913,7 +14913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233174291}
-  m_LocalRotation: {x: 0.022980595, y: 0.000000016459095, z: 0.000000033376068, w: 0.99973595}
+  m_LocalRotation: {x: 0.022980595, y: -0.000000018011708, z: 0.000000034168437, w: 0.99973595}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -21131,7 +21131,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.032048356, y: 0.000000017231098, z: -5.525122e-10, w: 0.9994863}
+  m_LocalRotation: {x: 0.032048356, y: -0.000000017231098, z: 5.525122e-10, w: 0.9994863}
   m_LocalPosition: {x: 2.531, y: 2.3590531, z: -3.8785715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -21615,7 +21615,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1114006446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1114006448}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1114006446
 MonoBehaviour:
   m_ObjectHideFlags: 0
