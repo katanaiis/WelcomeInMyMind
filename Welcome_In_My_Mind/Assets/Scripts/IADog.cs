@@ -15,13 +15,13 @@ public class IADog : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("U LOSE!");
         }
-    }
+    }*/
 
 
     // Update is called once per frame

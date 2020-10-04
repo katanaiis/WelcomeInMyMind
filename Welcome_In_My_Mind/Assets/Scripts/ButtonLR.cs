@@ -10,18 +10,18 @@ public class ButtonLR : MonoBehaviour
     
     public Image[] img = new Image[10];
 
-    public Image this[img index]
-    {
-        get
+    /*    public Image this[img index]
         {
-            i + 1;
-        }
-        set
-        {
-            Debug.Log("Prochaine photo right");
-            return img[index];
-        }
-    }
+            get
+            {
+                i + 1;
+            }
+            set
+            {
+                Debug.Log("Prochaine photo right");
+                return img[index];
+            }
+        }*/
 
 
 /*    void Left()
@@ -31,9 +31,9 @@ public class ButtonLR : MonoBehaviour
         if (img i = 0; i < img.Lenght; i++) {
             return img[index];
         }
-    }
+    }*/
 
-    void Right()
+    /*void Right()
     {
         Debug.Log("Prochaine photo right");
         i + 1;
