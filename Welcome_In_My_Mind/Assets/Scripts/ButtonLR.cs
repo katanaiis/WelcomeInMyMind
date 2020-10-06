@@ -24,16 +24,22 @@ public class ButtonLR : MonoBehaviour
         }*/
 
 
-/*    void Left()
+/*    public void Left()
     {
         Debug.Log("Photo d'avant left");
-        i - 1;
-        if (img i = 0; i < img.Lenght; i++) {
-            return img[index];
+        for (img i = 0; i < img.Lenght; i++)
+        {
+            i-=1;
+            return i;
+
+
+            Image[i] = i - 1;
+            if (img i = 0; i < img.Lenght; i++) {
+            return Image[i];
         }
     }*/
 
-    /*void Right()
+    /*public void Right()
     {
         Debug.Log("Prochaine photo right");
         i + 1;
