@@ -5,48 +5,66 @@ using UnityEngine.UI;
 
 public class ButtonLR : MonoBehaviour
 {
-    //index = photo courante
-    //ne pas dépasser 0
-    
-    public Image[] img = new Image[10];
 
-    /*    public Image this[img index]
-        {
-            get
-            {
-                i + 1;
-            }
-            set
-            {
-                Debug.Log("Prochaine photo right");
-                return img[index];
-            }
-        }*/
+    public Sprite[] sprites;
+    int index = 0;
 
+    public GameObject buttonNext;
+    public GameObject buttonPrevious;
+    public Color buttonActive = new Color(0.04f, 0.04f, 0.04f);
+    public Color buttonInactive = new Color(0.4f, 0.4f, 0.4f);
+    public Image image;
 
-/*    public void Left()
+    private void activateButton(bool active, GameObject buttonGo)
     {
-        Debug.Log("Photo d'avant left");
-        for (img i = 0; i < img.Lenght; i++)
+        Button button = buttonGo.GetComponent<Button>();
+        button.enabled = active;
+        Text text = buttonGo.GetComponentInChildren<Text>();
+        if (active == true)
         {
-            i-=1;
-            return i;
-
-
-            Image[i] = i - 1;
-            if (img i = 0; i < img.Lenght; i++) {
-            return Image[i];
+            text.color = buttonActive;
         }
-    }*/
+        else
+        {
+            text.color = buttonInactive;
+        }
 
-    /*public void Right()
+    }
+
+    private void MoveImage(int move)
     {
-        Debug.Log("Prochaine photo right");
-        i + 1;
-        return img[indexer];
-        if (i == 0)
-        {
+        index += move;
 
+        if (index < 0)
+        {
+            index = 0;
+            activateButton(false, buttonPrevious);
         }
-    }*/
+        else
+        {
+            activateButton(true, buttonPrevious);
+        }
+
+        if (index >= sprites.Length)
+        {
+            index = sprites.Length - 1;
+            activateButton(false, buttonNext);
+        }
+        else
+        {
+            activateButton(true, buttonNext);
+        }
+        image.sprite = sprites[index];
+    }
+
+    public void Next()
+    {
+        MoveImage(1);
+    }
+
+    public void Previous()
+    {
+        MoveImage(-1);
+    }
+
 }
