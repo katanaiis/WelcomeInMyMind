@@ -1,18 +1,30 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Play : MonoBehaviour
 {
 
     public UnityEvent onClick;
-    //public bool start;
-    //public UnityEvent whenAnimation;
+    public string sceneName;
+    private IEnumerator coroutine;
+
     public void OnMouseDown()
     {
         //start = true;
         onClick?.Invoke();
+
+        coroutine = Wait();
+        StartCoroutine(coroutine);
+
+
+        SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(100000);
     }
 
 
