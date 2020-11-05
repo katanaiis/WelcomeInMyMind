@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PrintPng : MonoBehaviour
 {
     public GameObject image;
+    //public GameObject button;
 
     //[SerializeField] private Image customImage;
 
@@ -19,10 +20,12 @@ public class PrintPng : MonoBehaviour
         if (image.activeSelf)
         {
             image.SetActive(false);
+            //button.SetActive(false);
         }
         else
         {
             image.SetActive(true);
+            //button.SetActive(true);
         }
     }
 }

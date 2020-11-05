@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ButtonQuit : MonoBehaviour
 {
     public Canvas canvas;
+    //public Button button;
 
     void Start()
     {
@@ -14,12 +15,14 @@ public class ButtonQuit : MonoBehaviour
         {
             transform.parent.GetComponent<canvas>();
         }*/
+        
     }
 
     public void Quit()
     {
         if (canvas.enabled == true)
         {
+            //button.enabled = active;
             canvas.enabled = false;
         }
     }
