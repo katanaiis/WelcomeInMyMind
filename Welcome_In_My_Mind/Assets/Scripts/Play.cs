@@ -2,74 +2,51 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+//using System.Collections.IEnumerator;
 
 public class Play : MonoBehaviour
 {
 
     /*public UnityEvent onClick;
     public string sceneName;
+    public Animation animation;
+    public Animation animation2;
     private IEnumerator coroutine;
     //butterfly
     //blink
 
+    public void start()
+    {
+        animation = GetComponent<Animation>();
+    }
+
     public void OnMouseDown()
     {
+        Debug.Log("debug");
         //start = true;
         onClick?.Invoke();
+        //Animation.Play();
+        //animation.PlayQueued("Image", "Image(1)");
 
-        StartCoroutine(coroutine);
+        //yield WaitForAnimation(animation, animation2);
+        //IEnumerator coroutine = 
+        
+        //StartCoroutine(coroutine);
 
         //Play.Animation(//blink);
         //coroutine = Wait(//blink);
-        StartCoroutine(coroutine);
+        //StartCoroutine(coroutine);
 
         SceneManager.LoadScene(sceneName);
     }
 
-    IEnumerator Wait()
+    private IEnumerator WaitForAnimation(Animation animation, Animation animation2)
     {
-        yield return new WaitForSeconds(5);
+        do
+        {
+            yield return animation;
+            yield return animation2;
+        } while (Animation.isPlaying);
     }*/
 }
 
-    /*public void PlayWithAnimation()
-    {
-        whenAnimation.Invoke();
-    }*/
-
-
-
-
-
-
-/*public UnityEvent onClick;
-public string sceneName;
-private IEnumerator wait;
-private StartCoroutine coroutine;
-public Animation animator;
-
-void Start()
-{
-    onClick?.Invoke();
-
-    // = GetComponent<>();
-    StartCoroutine(coroutine);
-}
-
-IEnumerator Wait()
-{
-
-    while (true) //tant que l'animationButterfly n'a pas fini
-    {
-
-        if () //attend la fin de l'animation papillon + tu play l'anim blink + a la fin de l'anim tu load la scene
-            yield return new WaitForSeconds(animButterfly);
-            play.Animation(animBlink);
-            yield return new WaitForSeconds(animBlink);
-            SceneManager.LoadScene(sceneName);
-        else
-
-        yield return new WaitForSeconds(anim);
-    }
-}
-}*/
