@@ -5,13 +5,13 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class IADog : MonoBehaviour
 {
-    public GameObject target;
+    //public GameObject target;
 
-    private NavMeshAgent agent;
+    //private NavMeshAgent agent;
 
-    bool IsOnTrigger = false;
+    //bool IsOnTrigger = false;
 
-    void Start()
+    /*void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
@@ -23,16 +23,16 @@ public class IADog : MonoBehaviour
             agent.isStopped = true;
             //reste à 1 metre en standing
         }
-    }
+    }*/
     
 
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if( !IsOnTrigger)
         {
             agent.destination = target.transform.position;
         }
-    }
+    }*/
 }

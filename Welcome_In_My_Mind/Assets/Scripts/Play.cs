@@ -7,46 +7,37 @@ using UnityEngine.SceneManagement;
 public class Play : MonoBehaviour
 {
 
-    /*public UnityEvent onClick;
+    public UnityEvent onClick;
     public string sceneName;
-    public Animation animation;
-    public Animation animation2;
+    public Animator animator;
     private IEnumerator coroutine;
-    //butterfly
-    //blink
 
-    public void start()
+    /*public void start()
     {
         animation = GetComponent<Animation>();
-    }
+    }*/
 
     public void OnMouseDown()
     {
         Debug.Log("debug");
         //start = true;
         onClick?.Invoke();
-        //Animation.Play();
-        //animation.PlayQueued("Image", "Image(1)");
-
-        //yield WaitForAnimation(animation, animation2);
-        //IEnumerator coroutine = 
+        animator.SetTrigger("BlinkTrigger");
+        //animator.Play();
         
-        //StartCoroutine(coroutine);
 
-        //Play.Animation(//blink);
-        //coroutine = Wait(//blink);
-        //StartCoroutine(coroutine);
+        StartCoroutine(WaitForAnimation(animator));
 
-        SceneManager.LoadScene(sceneName);
+        
     }
 
-    private IEnumerator WaitForAnimation(Animation animation, Animation animation2)
+    private IEnumerator WaitForAnimation(Animator animator)
     {
-        do
+        while (animator)
         {
-            yield return animation;
-            yield return animation2;
-        } while (Animation.isPlaying);
-    }*/
+            yield return new WaitForSeconds(1);
+        }
+        SceneManager.LoadScene(sceneName);
+    }
 }
 
