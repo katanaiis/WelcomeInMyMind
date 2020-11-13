@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -26,18 +27,17 @@ public class Play : MonoBehaviour
         //animator.Play();
         
 
-        StartCoroutine(WaitForAnimation(animator));
+        //StartCoroutine(WaitForAnimation(animator));
 
         
     }
 
-    private IEnumerator WaitForAnimation(Animator animator)
+    /*private IEnumerator WaitForAnimation(Animator animator)
     {
-        while (animator)
-        {
-            yield return new WaitForSeconds(1);
-        }
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Fin"))
+            yield return null;
+        print(sceneName);
         SceneManager.LoadScene(sceneName);
-    }
+    }*/
 }
 
