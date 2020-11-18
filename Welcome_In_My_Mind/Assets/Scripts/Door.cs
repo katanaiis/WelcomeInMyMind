@@ -10,7 +10,8 @@ public class Door : MonoBehaviour
     quand le player est sorti du collider
     alors tu play anim de fin (ou open en reverse)*/
 
-    /*public float speed;
+    /*public Animation doorAnim;
+    public float speed;
     public float MaxOpenValue;
     public Transform door;
     public bool opening = false;
