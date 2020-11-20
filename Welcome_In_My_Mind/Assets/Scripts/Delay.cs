@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Delay : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 60f;
+    float startingTime = 5f;
 
     public string sceneName;
 
