@@ -20,10 +20,10 @@ public class ButtonQuit : MonoBehaviour
 
     public void Quit()
     {
-        if (canvas.enabled == true)
+        foreach(Transform child in canvas.transform)
         {
             //button.enabled = active;
-            canvas.enabled = false;
+            child.gameObject.SetActive(false);
         }
     }
 }
