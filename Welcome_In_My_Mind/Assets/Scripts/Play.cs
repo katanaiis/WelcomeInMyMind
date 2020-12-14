@@ -27,17 +27,17 @@ public class Play : MonoBehaviour
         //animator.Play();
         
 
-        //StartCoroutine(WaitForAnimation(animator));
+        StartCoroutine(WaitForAnimation(animator));
 
         
     }
 
-    /*private IEnumerator WaitForAnimation(Animator animator)
+    private IEnumerator WaitForAnimation(Animator animator)
     {
         while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Fin"))
             yield return null;
         print(sceneName);
         SceneManager.LoadScene(sceneName);
-    }*/
+    }
 }
 
