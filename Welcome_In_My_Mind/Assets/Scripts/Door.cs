@@ -14,13 +14,6 @@ public class Door : MonoBehaviour
     //public Transform door;
     public Animator porte;
 
-    public AudioSource portesong;
-
-    void Start()
-    {
-        portesong = GetComponent<AudioSource>();
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -35,7 +28,6 @@ public class Door : MonoBehaviour
         {
 
             porte.SetTrigger("open");
-            portesong.Play();
         }
 
     }
@@ -45,7 +37,6 @@ public class Door : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             porte.SetTrigger("close");
-            portesong.Play();
         }
     }
 
